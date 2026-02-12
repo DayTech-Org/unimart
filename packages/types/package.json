@@ -1,0 +1,10 @@
+{
+  "name": "@unimart/types",
+  "version": "0.0.0",
+  "description": "Shared types for the unimart project",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.0"
+}

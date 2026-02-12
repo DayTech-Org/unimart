@@ -1,0 +1,19 @@
+# Dependencies
+node_modules
+.pnpm-debug.log
+
+# Next.js
+.next/
+out/
+
+# Turbo
+.turbo
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Build outputs
+dist
+build

@@ -1,0 +1,11 @@
+{
+  "name": "@unimart/db",
+  "version": "0.0.0",
+  "description": "Database package for the unimart project",
+  "main": "./src/index.ts",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.0",
+  "devDependencies": {
+    "tsdown": "catalog:"
+  }
+}

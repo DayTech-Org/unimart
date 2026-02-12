@@ -1,0 +1,7 @@
+packages:
+  - apps/*
+  - packages/*
+
+catalog:
+  tsdown: 0.20.3
+  typescript: ^5.9.3

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+
+  "ignore": [
+    "**/*.d.ts",
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/.next/**",
+    "**/coverage/**",
+    "**/supabase/migrations/**",
+    "**/*.sql"
+  ],
+
+  "tags": ["-lintignore"],
+
+  "ignoreExportsUsedInFile": {
+    "interface": true,
+    "type": true
+  },
+
+  "workspaces": {
+    "apps/api": {
+      "entry": "src/**/*.{ts, js}"
+    },
+    "apps/{web, admin}": {
+      "entry": [
+        "app/**/*.{ts,tsx}",
+        "middleware.{ts,tsx}",
+        "middleware.{ts,tsx}",
+        "next.config.{js,ts,mjs}",
+        "tailwind.config.{js,ts}",
+        "postcss.config.{js,ts}"
+      ],
+
+      "project": ["**/*.{ts,tsx}", "**/*.js"]
+    },
+    "packages/tsconfig": {
+      "entry": []
+    },
+    "packages/*": {
+      "entry": "{src/,}index.{ts,tsx}",
+      "project": "**/*.{ts,tsx}"
+    }
+  },
+
+  "ignoreDependencies": ["turbo", "tsdown"]
+}

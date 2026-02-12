@@ -1,0 +1,14 @@
+{
+  "name": "@unimart/api",
+  "version": "0.0.0",
+  "description": "API package for the unimart project",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@unimart/auth": "workspace:*"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.0"
+}

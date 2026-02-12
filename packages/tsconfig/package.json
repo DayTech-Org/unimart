@@ -1,0 +1,8 @@
+{
+  "name": "@unimart/tsconfig",
+  "version": "0.0.0",
+  "description": "Shared TypeScript configurations for the unimart project",
+  "private": true,
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.0"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@unimart/auth",
+  "version": "0.0.0",
+  "description": "Authentication package for the unimart project",
+  "main": "./src/index.ts",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    }
+  },
+  "packageManager": "pnpm@10.17.0",
+  "devDependencies": {
+    "tsdown": "catalog:"
+  }
+}
