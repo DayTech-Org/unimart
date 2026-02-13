@@ -3,5 +3,16 @@ packages:
   - packages/*
 
 catalog:
-  tsdown: 0.20.3
-  typescript: ^5.9.3
+  '@types/node': ^25.2.3
+  '@types/react': ^19.2.14
+  '@types/react-dom': ^19.2.3
+  next: ^16.1.6
+  react: ^19.2.4
+  react-dom: ^19.2.4
+  tailwindcss: ^4.1.18
+  tsdown: ^0.20.3
+  tsx: ^4.21.0
+  typescript: ~5.9.3
+  vite: ^7.3.1
+  vitest: ^4.0.16
+  zod: ^4.3.6

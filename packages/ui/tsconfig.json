@@ -1,0 +1,13 @@
+{
+  "extends": "@unimart/tsconfig/react-library.json",
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "moduleResolution": "bundler"
+  },
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}

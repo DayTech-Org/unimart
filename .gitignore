@@ -17,3 +17,5 @@ out/
 # Build outputs
 dist
 build
+*storybook.log
+storybook-static

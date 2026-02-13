@@ -4,5 +4,10 @@
   "description": "Shared TypeScript configurations for the unimart project",
   "private": true,
   "license": "MIT",
+  "files": [
+    "base.json",
+    "react-library.json",
+    "nextjs.json"
+  ],
   "packageManager": "pnpm@10.17.0"
 }
