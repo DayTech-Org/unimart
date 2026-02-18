@@ -8,40 +8,40 @@
     "**/.next/**",
     "**/coverage/**",
     "**/supabase/migrations/**",
-    "**/*.sql"
+    "**/*.sql",
   ],
 
   "tags": ["-lintignore"],
 
   "ignoreExportsUsedInFile": {
     "interface": true,
-    "type": true
+    "type": true,
   },
 
   "workspaces": {
     "apps/api": {
-      "entry": "src/**/*.{ts, js}"
+      "entry": "src/**/*.{ts, js}",
     },
-    "apps/{web, admin}": {
+    "apps/{web, design-system}": {
       "entry": [
         "app/**/*.{ts,tsx}",
         "middleware.{ts,tsx}",
         "middleware.{ts,tsx}",
         "next.config.{js,ts,mjs}",
         "tailwind.config.{js,ts}",
-        "postcss.config.{js,ts}"
+        "postcss.config.{js,ts}",
       ],
 
-      "project": ["**/*.{ts,tsx}", "**/*.js"]
+      "project": ["**/*.{ts,tsx}", "**/*.js"],
     },
     "packages/tsconfig": {
-      "entry": []
+      "entry": [],
     },
     "packages/*": {
       "entry": "{src/,}index.{ts,tsx}",
-      "project": "**/*.{ts,tsx}"
-    }
+      "project": "**/*.{ts,tsx}",
+    },
   },
 
-  "ignoreDependencies": ["turbo", "tsdown"]
+  "ignoreDependencies": ["turbo", "tsdown"],
 }

@@ -7,7 +7,7 @@
   "scripts": {
     "api:dev": "pnpm --filter @unimart/api dev",
     "web:dev": "pnpm --filter @unimart/web dev",
-    "admin:dev": "pnpm --filter @unimart/admin dev",
+    "design-system:dev": "pnpm --filter @unimart/design-system dev",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "format": "biome format --write .",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.3.15",
     "knip": "^5.83.1",
+    "rimraf": "^6.1.2",
     "turbo": "^2.8.7",
     "typescript": "catalog:"
   }

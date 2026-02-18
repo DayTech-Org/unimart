@@ -38,6 +38,7 @@
   --sidebar-ring: var(--ring);
 }
 
+[data-theme="dark"],
 .dark {
   --primary-foreground: var(--foreground);
   --destructive-foreground: var(--foreground);
