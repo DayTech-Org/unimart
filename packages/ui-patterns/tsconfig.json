@@ -1,0 +1,12 @@
+{
+  "extends": "@unimart/tsconfig/react-library.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "moduleResolution": "bundler"
+  },
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}

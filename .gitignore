@@ -17,3 +17,8 @@ out/
 # Build outputs
 dist
 build
+*storybook.log
+storybook-static
+
+# notes
+/notes.md

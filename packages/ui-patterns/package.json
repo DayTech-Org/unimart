@@ -4,12 +4,26 @@
   "description": "Shared UI patterns for the unimart project",
   "main": "./src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "license": "MIT",
   "packageManager": "pnpm@10.17.0",
+  "dependencies": {
+    "@unimart/ui": "workspace:*",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.564.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-qr-code": "^2.0.18",
+    "tailwind-merge": "^3.4.0"
+  },
   "devDependencies": {
-    "tsdown": "catalog:"
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@unimart/tsconfig": "workspace:*",
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
   }
 }
