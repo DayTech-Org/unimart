@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react";
-import { type LucideIcon } from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -11,17 +9,9 @@ import {
   CommandList,
   CommandSeparator,
 } from "@unimart/ui";
+import type { LucideIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
-
-interface CommandMenuProps {
-  sections: {
-    id: string;
-    label: string;
-    icon: LucideIcon;
-  }[];
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-}
+import * as React from "react";
 
 export function CommandMenu({
   groups,
@@ -46,7 +36,7 @@ export function CommandMenu({
       onOpenChange(false);
       command();
     },
-    [onOpenChange],
+    [onOpenChange]
   );
 
   return (

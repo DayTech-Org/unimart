@@ -1,8 +1,5 @@
 "use client";
 
-import * as React from "react";
-import { PanelRight } from "lucide-react";
-
 import {
   Button,
   Input,
@@ -16,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@unimart/ui";
+import { PanelRight } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function SheetSection() {
@@ -26,12 +24,9 @@ export function SheetSection() {
           <PanelRight className="size-3.5" />
           Component: Sheet
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Sheet
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Sheet</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          Extends the Dialog component to display content that complements the
-          main screen.
+          Extends the Dialog component to display content that complements the main screen.
         </p>
       </div>
 
@@ -95,8 +90,7 @@ export function SheetSection() {
               <SheetHeader>
                 <SheetTitle>Edit profile</SheetTitle>
                 <SheetDescription>
-                  Make changes to your profile here. Click save when you&apos;re
-                  done.
+                  Make changes to your profile here. Click save when you&apos;re done.
                 </SheetDescription>
               </SheetHeader>
               <div className="grid gap-4 py-4">
@@ -110,11 +104,7 @@ export function SheetSection() {
                   <Label htmlFor="username" className="text-right">
                     Username
                   </Label>
-                  <Input
-                    id="username"
-                    value="@Lymore01"
-                    className="col-span-3"
-                  />
+                  <Input id="username" value="@Lymore01" className="col-span-3" />
                 </div>
               </div>
               <SheetFooter>

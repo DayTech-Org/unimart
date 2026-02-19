@@ -1,8 +1,7 @@
 "use client";
 
-import * as React from "react";
-import { Italic, ToggleRight } from "lucide-react";
 import { Toggle } from "@unimart/ui";
+import { Italic, ToggleRight } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function ToggleSection() {
@@ -13,9 +12,7 @@ export function ToggleSection() {
           <ToggleRight className="size-3.5" />
           Component: Toggle
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Toggle
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Toggle</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           A two-state button that can be either on or off.
         </p>

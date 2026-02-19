@@ -13,6 +13,7 @@ export * from "./components/dialog";
 export * from "./components/drawer";
 export * from "./components/dropdown-menu";
 export * from "./components/expanding-textarea";
+export * from "./components/file-upload";
 export * from "./components/form";
 export * from "./components/input";
 export * from "./components/label";
@@ -29,7 +30,5 @@ export * from "./components/tabs";
 export * from "./components/textarea";
 export * from "./components/theme-provider";
 export * from "./components/toggle";
-
 export * from "./components/tooltip";
-export * from "./components/file-upload";
 export * from "./lib/utils";

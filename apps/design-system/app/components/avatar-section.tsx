@@ -10,12 +10,9 @@ export function AvatarSection() {
           <User className="size-3.5" />
           Component: Avatar
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Avatar
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Avatar</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          The visual representation of a campus user. Includes status rings and
-          presence dots.
+          The visual representation of a campus user. Includes status rings and presence dots.
         </p>
       </div>
 
@@ -67,9 +64,7 @@ export function AvatarSection() {
           <div className="relative group">
             <Avatar className="h-24 w-24 border-4 border-background ring-4 ring-emerald-500/20 shadow-2xl transition-transform group-hover:scale-105">
               <AvatarImage src="https://github.com/lymore01.png" alt="Lymore" />
-              <AvatarFallback className="text-2xl font-bold bg-primary/10">
-                LY
-              </AvatarFallback>
+              <AvatarFallback className="text-2xl font-bold bg-primary/10">LY</AvatarFallback>
             </Avatar>
             <span className="absolute bottom-1 right-1 size-6 bg-emerald-500 border-4 border-card rounded-full shadow-sm animate-pulse" />
           </div>

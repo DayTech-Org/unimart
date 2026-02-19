@@ -8,9 +8,7 @@ export function TypographySection() {
           <Type className="size-3.5" />
           Foundation: Typography
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Typography
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Typography</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Using Lexend for UI and Inter for impact.
         </p>
@@ -21,21 +19,16 @@ export function TypographySection() {
           <p className="text-[10px] font-mono uppercase text-primary mb-4 tracking-widest">
             Display Text
           </p>
-          <h1 className="text-6xl font-heading font-black tracking-tighter">
-            Campus Marketplace
-          </h1>
-          <p className="text-sm font-mono text-muted-foreground">
-            font-heading / 6xl / black
-          </p>
+          <h1 className="text-6xl font-heading font-black tracking-tighter">Campus Marketplace</h1>
+          <p className="text-sm font-mono text-muted-foreground">font-heading / 6xl / black</p>
         </div>
         <div className="space-y-2">
           <p className="text-[10px] font-mono uppercase text-primary mb-4 tracking-widest">
             Body Text
           </p>
           <p className="text-lg leading-relaxed max-w-2xl font-sans text-foreground/80">
-            Every product listed on Unimart goes through a rigorous campus
-            validation. We ensure that student-to-student commerce is safe,
-            fast, and exciting.
+            Every product listed on Unimart goes through a rigorous campus validation. We ensure
+            that student-to-student commerce is safe, fast, and exciting.
           </p>
           <p className="text-sm font-mono text-muted-foreground">
             font-sans / lg / leading-relaxed

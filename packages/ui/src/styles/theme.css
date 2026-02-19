@@ -1,7 +1,7 @@
 @import "./brand.css";
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-@custom-variant mango (&:where([data-theme=mango], [data-theme=mango] *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+@custom-variant mango (&:where([data-theme="mango"], [data-theme="mango"] *));
 
 :root {
   --background: var(--brand-bg);

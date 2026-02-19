@@ -4,8 +4,7 @@ export function ColorsSection() {
   const colorCategories = [
     {
       title: "Brand Colors",
-      description:
-        "Core brand identity colors used for primary actions and highlights.",
+      description: "Core brand identity colors used for primary actions and highlights.",
       colors: [
         {
           name: "Primary",
@@ -147,12 +146,9 @@ export function ColorsSection() {
           <Palette className="size-3.5" />
           Foundation: Colors
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Color Usage
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Color Usage</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          A comprehensive guide to the semantic color system, optimized for P3
-          wide gamut displays.
+          A comprehensive guide to the semantic color system, optimized for P3 wide gamut displays.
         </p>
       </div>
 
@@ -202,12 +198,8 @@ export function ColorsSection() {
         {colorCategories.map((category) => (
           <div key={category.title} className="space-y-6">
             <div className="space-y-1">
-              <h4 className="text-xl font-heading font-semibold">
-                {category.title}
-              </h4>
-              <p className="text-sm text-muted-foreground">
-                {category.description}
-              </p>
+              <h4 className="text-xl font-heading font-semibold">{category.title}</h4>
+              <p className="text-sm text-muted-foreground">{category.description}</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -254,9 +246,7 @@ export function ColorsSection() {
                 <div
                   className={`h-24 w-full rounded-xl border-[3px] ${border.class} bg-card/30 flex items-center justify-center transition-all duration-300 group-hover:bg-card/50 group-hover:scale-[1.02]`}
                 >
-                  <span className="text-[10px] text-muted-foreground/50 font-mono">
-                    3px
-                  </span>
+                  <span className="text-[10px] text-muted-foreground/50 font-mono">3px</span>
                 </div>
                 <div className="space-y-1.5 px-1">
                   <p className="font-semibold text-sm">{border.name}</p>
@@ -267,9 +257,7 @@ export function ColorsSection() {
                     </div>
                     <div className="flex items-center justify-between text-[10px] text-muted-foreground font-mono bg-muted/50 p-1.5 rounded border border-border/40">
                       <span>Var</span>
-                      <span className="text-foreground opacity-70">
-                        --{border.var}
-                      </span>
+                      <span className="text-foreground opacity-70">--{border.var}</span>
                     </div>
                   </div>
                 </div>

@@ -8,16 +8,7 @@ import {
   EmptyStateIcon,
   EmptyStateTitle,
 } from "@unimart/ui-patterns";
-import {
-  Bell,
-  Ghost,
-  Search,
-  ShieldCheck,
-  RefreshCw,
-  ShoppingBag,
-  Store,
-  PackageX,
-} from "lucide-react";
+import { Bell, Ghost, RefreshCw, Search, ShieldCheck } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function EmptyStateSection() {
@@ -28,9 +19,7 @@ export function EmptyStateSection() {
           <Ghost className="size-3.5" />
           Pattern: Empty State
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Empty State
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Empty State</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Placeholders for when data is missing or hasn&apos;t been created yet.
         </p>
@@ -73,8 +62,8 @@ import { Search } from "lucide-react";
               </EmptyStateIcon>
               <EmptyStateTitle>No listings found</EmptyStateTitle>
               <EmptyStateDescription>
-                We couldn&apos;t find any listings matching your current
-                filters. Try removing some filters or search for something else.
+                We couldn&apos;t find any listings matching your current filters. Try removing some
+                filters or search for something else.
               </EmptyStateDescription>
               <EmptyStateAction>
                 <Button>Clear all filters</Button>
@@ -113,9 +102,7 @@ import { Bell } from "lucide-react";
               <EmptyStateIcon className="bg-muted/30">
                 <Bell />
               </EmptyStateIcon>
-              <EmptyStateTitle className="text-xl">
-                No new notifications
-              </EmptyStateTitle>
+              <EmptyStateTitle className="text-xl">No new notifications</EmptyStateTitle>
               <EmptyStateDescription className="mb-0">
                 You&apos;re all caught up! Check back later for updates.
               </EmptyStateDescription>
@@ -162,8 +149,7 @@ import { RefreshCw, ShieldCheck } from "lucide-react";
               </EmptyStateIcon>
               <EmptyStateTitle>All disputes resolved</EmptyStateTitle>
               <EmptyStateDescription>
-                Great job! There are no active disputes requiring your attention
-                right now.
+                Great job! There are no active disputes requiring your attention right now.
               </EmptyStateDescription>
               <EmptyStateAction>
                 <Button variant="outline" className="gap-2">

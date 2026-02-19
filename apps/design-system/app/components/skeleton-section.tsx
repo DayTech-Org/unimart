@@ -1,9 +1,7 @@
 "use client";
 
-import * as React from "react";
-import { Loader2 } from "lucide-react";
-
 import { Skeleton } from "@unimart/ui";
+import { Loader2 } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function SkeletonSection() {
@@ -14,9 +12,7 @@ export function SkeletonSection() {
           <Loader2 className="size-3.5" />
           Component: Skeleton
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Skeleton
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Skeleton</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Use to show a placeholder while content is loading.
         </p>

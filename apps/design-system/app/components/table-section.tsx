@@ -1,4 +1,7 @@
 import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
   Badge,
   Table,
   TableBody,
@@ -6,23 +9,20 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@unimart/ui";
 import {
-  ShoppingBag,
-  Clock,
-  CheckCircle2,
   AlertCircle,
-  HelpCircle,
-  Smartphone,
   BookOpen,
+  CheckCircle2,
+  Clock,
   Coffee,
+  HelpCircle,
+  ShoppingBag,
+  Smartphone,
 } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
@@ -68,13 +68,10 @@ export function TableSection() {
         <div className="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-[10px]">
           <ShoppingBag className="size-3.5" /> Component: Table
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Table
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Table</h3>
         <p className="text-muted-foreground max-w-2xl">
-          A robust data table designed for high-density information display,
-          featuring custom cell rendering for marketplace transactions, status
-          badges, and user profiles.
+          A robust data table designed for high-density information display, featuring custom cell
+          rendering for marketplace transactions, status badges, and user profiles.
         </p>
       </div>
 
@@ -269,9 +266,7 @@ const campusOrders = [
                           <order.icon className="size-5" />
                         </div>
                         <div>
-                          <p className="font-bold text-sm tracking-tight w-max">
-                            {order.item}
-                          </p>
+                          <p className="font-bold text-sm tracking-tight w-max">{order.item}</p>
                           <p className="text-xs text-muted-foreground font-mono w-max">
                             {order.category} • {order.id}
                           </p>
@@ -287,9 +282,7 @@ const campusOrders = [
                             {order.buyer.name[0]}
                           </AvatarFallback>
                         </Avatar>
-                        <span className="text-sm font-medium w-max">
-                          {order.buyer.name}
-                        </span>
+                        <span className="text-sm font-medium w-max">{order.buyer.name}</span>
                       </div>
                     </TableCell>
 
@@ -304,33 +297,23 @@ const campusOrders = [
                         }
                         className="gap-1.5 py-1 px-3 rounded-full text-[10px] font-bold uppercase tracking-wide border-none shadow-sm w-max mx-auto"
                       >
-                        {order.status === "completed" && (
-                          <CheckCircle2 className="size-3" />
-                        )}
-                        {order.status === "pending" && (
-                          <Clock className="size-3 animate-pulse" />
-                        )}
-                        {order.status === "cancelled" && (
-                          <AlertCircle className="size-3" />
-                        )}
+                        {order.status === "completed" && <CheckCircle2 className="size-3" />}
+                        {order.status === "pending" && <Clock className="size-3 animate-pulse" />}
+                        {order.status === "cancelled" && <AlertCircle className="size-3" />}
                         {order.status}
                       </Badge>
                     </TableCell>
 
                     <TableCell>
                       <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium w-max">
-                          {order.method}
-                        </span>
+                        <span className="text-sm font-medium w-max">{order.method}</span>
                         <TooltipProvider>
                           <Tooltip>
                             <TooltipTrigger>
                               <HelpCircle className="size-3 text-muted-foreground hover:text-primary transition-colors" />
                             </TooltipTrigger>
                             <TooltipContent className="bg-popover border-border">
-                              <p className="text-[10px]">
-                                Verified via {order.method} gateway
-                              </p>
+                              <p className="text-[10px]">Verified via {order.method} gateway</p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
@@ -350,8 +333,8 @@ const campusOrders = [
 
       {/* Goofy Marketplace Hint */}
       <p className="text-center text-[10px] text-muted-foreground italic opacity-50">
-        &ldquo;Legend says Lymore only buys the highest rated textbooks to
-        maintain his 98% trust score.&rdquo;
+        &ldquo;Legend says Lymore only buys the highest rated textbooks to maintain his 98% trust
+        score.&rdquo;
       </p>
     </section>
   );

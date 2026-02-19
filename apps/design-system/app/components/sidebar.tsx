@@ -1,17 +1,17 @@
 "use client";
 
+import { ScrollArea, useTheme } from "@unimart/ui";
 import {
   ChevronRight,
+  type LucideIcon,
   Monitor,
   Moon,
   Palette,
+  Search,
   Store,
   Sun,
-  Search,
-  LucideIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { ScrollArea, useTheme } from "@unimart/ui";
 import { useSyncExternalStore } from "react";
 
 const emptySubscribe = () => () => {};
@@ -30,7 +30,7 @@ export function Sidebar({
   const mounted = useSyncExternalStore(
     emptySubscribe,
     () => true,
-    () => false,
+    () => false
   );
 
   return (
@@ -45,6 +45,7 @@ export function Sidebar({
           </h1>
         </div>
         <button
+          type="button"
           onClick={onSearchClick}
           className="w-full flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground bg-muted/50 hover:bg-muted/80 hover:text-foreground border border-border/50 rounded-lg transition-colors group"
         >
@@ -86,14 +87,13 @@ export function Sidebar({
           <div className="flex items-center justify-between">
             <p className="text-xs font-semibold text-primary">Theme</p>
             {mounted && (
-              <span className="text-[10px] uppercase font-bold text-muted-foreground">
-                {theme}
-              </span>
+              <span className="text-[10px] uppercase font-bold text-muted-foreground">{theme}</span>
             )}
           </div>
 
           <div className="grid grid-cols-4 gap-1">
             <button
+              type="button"
               onClick={() => setTheme("light")}
               className={`flex items-center justify-center p-2 rounded-lg transition-all duration-300 ${
                 mounted && theme === "light"
@@ -105,6 +105,7 @@ export function Sidebar({
               <Sun className="size-4" />
             </button>
             <button
+              type="button"
               onClick={() => setTheme("dark")}
               className={`flex items-center justify-center p-2 rounded-lg transition-all duration-300 ${
                 mounted && theme === "dark"
@@ -116,6 +117,7 @@ export function Sidebar({
               <Moon className="size-4" />
             </button>
             <button
+              type="button"
               onClick={() => setTheme("mango")}
               className={`flex items-center justify-center p-2 rounded-lg transition-all duration-300 ${
                 mounted && theme === "mango"
@@ -127,6 +129,7 @@ export function Sidebar({
               <Palette className="size-4" />
             </button>
             <button
+              type="button"
               onClick={() => setTheme("system")}
               className={`flex items-center justify-center p-2 rounded-lg transition-all duration-300 ${
                 mounted && theme === "system"

@@ -1,13 +1,13 @@
 "use client";
 
 import {
+  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-  Button,
 } from "@unimart/ui";
 import { Menu } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
@@ -20,12 +20,10 @@ export function DropdownMenuSection() {
           <Menu className="size-3.5" />
           Component: Dropdown Menu
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Dropdown Menu
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Dropdown Menu</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          Displays a menu to the user - such as a set of actions or functions -
-          triggered by a button.
+          Displays a menu to the user - such as a set of actions or functions - triggered by a
+          button.
         </p>
       </div>
 

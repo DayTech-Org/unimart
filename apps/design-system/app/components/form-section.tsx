@@ -1,9 +1,8 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 import {
+  Button,
   Form,
   FormControl,
   FormDescription,
@@ -12,10 +11,11 @@ import {
   FormLabel,
   FormMessage,
   Input,
-  Button,
   Textarea,
 } from "@unimart/ui";
 import { FileText } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { ComponentPreview } from "./component-preview";
 
 const formSchema = z.object({
@@ -49,12 +49,10 @@ export function FormSection() {
           <FileText className="size-3.5" />
           Component: Form
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Form
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Form</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          A collection of input fields that allow users to enter and submit data
-          to a server or application.
+          A collection of input fields that allow users to enter and submit data to a server or
+          application.
         </p>
       </div>
 
@@ -172,10 +170,7 @@ export function ListingForm() {
                     <FormItem>
                       <FormLabel>Item Title</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="e.g. Calculus Textbook"
-                          {...field}
-                        />
+                        <Input placeholder="e.g. Calculus Textbook" {...field} />
                       </FormControl>
                       <FormDescription>What are you selling?</FormDescription>
                       <FormMessage />
@@ -191,9 +186,7 @@ export function ListingForm() {
                       <FormControl>
                         <Input type="number" placeholder="25" {...field} />
                       </FormControl>
-                      <FormDescription>
-                        Set a fair price for students.
-                      </FormDescription>
+                      <FormDescription>Set a fair price for students.</FormDescription>
                       <FormMessage />
                     </FormItem>
                   )}

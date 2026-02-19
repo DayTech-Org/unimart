@@ -1,19 +1,9 @@
 "use client";
 
-import { useState, useEffect, ComponentType } from "react";
-import {
-  Menu,
-  X,
-  ChevronRight,
-  Store,
-  Sun,
-  Moon,
-  Palette,
-  Monitor,
-  Search,
-} from "lucide-react";
-import Link from "next/link";
 import { ScrollArea, useTheme } from "@unimart/ui";
+import { ChevronRight, Menu, Monitor, Moon, Palette, Search, Store, Sun, X } from "lucide-react";
+import Link from "next/link";
+import { type ComponentType, useEffect, useState } from "react";
 
 export function MobileNav({
   groups,
@@ -52,18 +42,18 @@ export function MobileNav({
           <div className="size-8 rounded-lg bg-primary shadow-[0_0_20px_rgba(var(--primary),0.3)] flex items-center justify-center">
             <Store className="size-5 text-primary-foreground" />
           </div>
-          <span className="text-lg font-heading font-bold tracking-tight">
-            Design System
-          </span>
+          <span className="text-lg font-heading font-bold tracking-tight">Design System</span>
         </div>
         <div className="flex items-center gap-2">
           <button
+            type="button"
             onClick={() => onSearchClick?.()}
             className="p-2 text-muted-foreground hover:text-foreground active:text-primary transition-colors"
           >
             <Search className="size-6" />
           </button>
           <button
+            type="button"
             onClick={() => setIsOpen(true)}
             className="p-2 -mr-2 text-muted-foreground hover:text-foreground active:text-primary transition-colors"
           >
@@ -83,11 +73,10 @@ export function MobileNav({
               <div className="size-8 rounded-lg bg-primary shadow-[0_0_20px_rgba(var(--primary),0.3)] flex items-center justify-center">
                 <Store className="size-5 text-primary-foreground" />
               </div>
-              <span className="text-lg font-heading font-bold tracking-tight">
-                Design System
-              </span>
+              <span className="text-lg font-heading font-bold tracking-tight">Design System</span>
             </div>
             <button
+              type="button"
               onClick={() => setIsOpen(false)}
               className="p-2 -mr-2 text-muted-foreground hover:text-foreground active:text-primary transition-colors"
             >
@@ -125,6 +114,7 @@ export function MobileNav({
             <p className="text-xs font-semibold text-primary mb-3">Theme</p>
             <div className="grid grid-cols-4 gap-2">
               <button
+                type="button"
                 onClick={() => setTheme("light")}
                 className={`flex flex-col items-center justify-center gap-1 p-3 rounded-xl transition-all duration-300 ${
                   theme === "light"
@@ -136,6 +126,7 @@ export function MobileNav({
                 <span className="text-[10px] font-medium">Light</span>
               </button>
               <button
+                type="button"
                 onClick={() => setTheme("dark")}
                 className={`flex flex-col items-center justify-center gap-1 p-3 rounded-xl transition-all duration-300 ${
                   theme === "dark"
@@ -147,6 +138,7 @@ export function MobileNav({
                 <span className="text-[10px] font-medium">Dark</span>
               </button>
               <button
+                type="button"
                 onClick={() => setTheme("mango")}
                 className={`flex flex-col items-center justify-center gap-1 p-3 rounded-xl transition-all duration-300 ${
                   theme === "mango"
@@ -158,6 +150,7 @@ export function MobileNav({
                 <span className="text-[10px] font-medium">Mango</span>
               </button>
               <button
+                type="button"
                 onClick={() => setTheme("system")}
                 className={`flex flex-col items-center justify-center gap-1 p-3 rounded-xl transition-all duration-300 ${
                   theme === "system"

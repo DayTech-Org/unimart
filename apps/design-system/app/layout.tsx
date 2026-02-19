@@ -1,6 +1,6 @@
+import { ThemeProvider, Toaster } from "@unimart/ui";
 import type { Metadata } from "next";
 import { Inter, Lexend } from "next/font/google";
-import { ThemeProvider, Toaster } from "@unimart/ui";
 import "./globals.css";
 
 const inter = Inter({

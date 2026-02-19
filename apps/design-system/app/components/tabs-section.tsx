@@ -12,12 +12,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@unimart/ui";
-import {
-  ArrowRightLeft,
-  CalendarClock,
-  CreditCard,
-  Layers,
-} from "lucide-react";
+import { ArrowRightLeft, CalendarClock, CreditCard, Layers } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function TabsSection() {
@@ -28,9 +23,7 @@ export function TabsSection() {
           <Layers className="size-3.5" />
           Component: Tabs
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Tabs
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Tabs</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           For switching item acquisition modes.
         </p>
@@ -106,9 +99,7 @@ import {
 </Tabs>`}
       >
         <div className="space-y-4">
-          <h4 className="text-lg font-heading font-semibold">
-            Acquisition Mode
-          </h4>
+          <h4 className="text-lg font-heading font-semibold">Acquisition Mode</h4>
           <Tabs defaultValue="buy" className="w-full max-w-[500px]">
             <TabsList className="grid w-full grid-cols-3 h-auto p-1 bg-muted/50 rounded-xl">
               <TabsTrigger
@@ -142,9 +133,7 @@ import {
                       <span>Scientific Calculator</span>
                       <span className="text-primary text-xl">KES 4,500</span>
                     </CardTitle>
-                    <CardDescription>
-                      Casio FX-991EX Classwiz. Slightly used.
-                    </CardDescription>
+                    <CardDescription>Casio FX-991EX Classwiz. Slightly used.</CardDescription>
                   </CardHeader>
                   <CardFooter>
                     <Button className="w-full">
@@ -161,14 +150,10 @@ import {
                       <span>Semester Rental</span>
                       <span className="text-primary text-xl">
                         KES 500
-                        <span className="text-sm text-muted-foreground">
-                          /mo
-                        </span>
+                        <span className="text-sm text-muted-foreground">/mo</span>
                       </span>
                     </CardTitle>
-                    <CardDescription>
-                      Rent it for the semester. Deposit required.
-                    </CardDescription>
+                    <CardDescription>Rent it for the semester. Deposit required.</CardDescription>
                   </CardHeader>
                   <CardFooter>
                     <Button variant="secondary" className="w-full">

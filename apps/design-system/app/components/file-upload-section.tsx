@@ -1,8 +1,7 @@
 "use client";
 
-import * as React from "react";
-import { Upload } from "lucide-react";
 import { FileUpload, toast } from "@unimart/ui";
+import { Upload } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function FileUploadSection() {
@@ -18,12 +17,9 @@ export function FileUploadSection() {
           <Upload className="size-3.5" />
           Component: File Upload
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          File Upload
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">File Upload</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          A robust drag and drop file upload component with micro-interactions
-          and validation.
+          A robust drag and drop file upload component with micro-interactions and validation.
         </p>
       </div>
 

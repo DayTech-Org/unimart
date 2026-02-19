@@ -17,9 +17,7 @@ export function BreadcrumbSection() {
           <ChevronRight className="size-3.5" />
           Component: Breadcrumb
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Breadcrumb
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Breadcrumb</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Displays the path to the current resource using a hierarchy of links.
         </p>

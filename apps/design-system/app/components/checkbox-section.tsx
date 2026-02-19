@@ -9,12 +9,9 @@ export function CheckboxSection() {
           <CheckSquare className="size-3.5" />
           Component: Checkbox
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Checkbox
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Checkbox</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          A control that allows the user to toggle between checked and not
-          checked.
+          A control that allows the user to toggle between checked and not checked.
         </p>
       </div>
 

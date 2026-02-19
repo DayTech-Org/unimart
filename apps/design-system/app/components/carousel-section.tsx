@@ -1,5 +1,4 @@
 "use client";
-import * as React from "react";
 import {
   Card,
   CardContent,
@@ -20,9 +19,7 @@ export function CarouselSection() {
           <Copy className="size-3.5" />
           Component: Carousel
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Carousel
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Carousel</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           A carousel with motion and swipe built using Embla.
         </p>
@@ -69,9 +66,7 @@ export function CarouselSection() {
                   <div className="p-1">
                     <Card>
                       <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-4xl font-semibold">
-                          {index + 1}
-                        </span>
+                        <span className="text-4xl font-semibold">{index + 1}</span>
                       </CardContent>
                     </Card>
                   </div>

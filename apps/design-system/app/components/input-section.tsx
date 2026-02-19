@@ -10,12 +10,9 @@ export function InputSection() {
           <CaseSensitive className="size-3.5" />
           Component: Input
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Input
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Input</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          Displays a form input field or a component that looks like an input
-          field.
+          Displays a form input field or a component that looks like an input field.
         </p>
       </div>
 

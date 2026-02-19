@@ -73,11 +73,11 @@
 
   input:-webkit-autofill {
     @variant dark {
-      -webkit-box-shadow: 0 0 0px 1000px var(--surface) inset !important;
+      -webkit-box-shadow: 0 0 0px 1000px var(--surface) inset;
       /* -webkit-text-fill-color: var(--foreground) !important; */
     }
     @apply bg-surface text-foreground;
     /* -webkit-box-shadow: 0 0 0px 1000px var(--surface) inset !important; */
-    -webkit-text-fill-color: var(--foreground) !important;
+    -webkit-text-fill-color: var(--foreground);
   }
 }

@@ -1,9 +1,9 @@
 "use client";
 
-import * as React from "react";
+import { Button, cn, ScrollArea } from "@unimart/ui";
 import { Check, ChevronDown, ChevronUp, Copy } from "lucide-react";
-import { cn, Button, ScrollArea } from "@unimart/ui";
 import Prism from "prismjs";
+import * as React from "react";
 import "prismjs/components/prism-jsx";
 import "prismjs/components/prism-tsx";
 import "prismjs/components/prism-bash";
@@ -43,7 +43,7 @@ export function ComponentPreview({
     <div
       className={cn(
         "group relative flex flex-col rounded-xl border border-border bg-card/30 overflow-hidden",
-        className,
+        className
       )}
       {...props}
     >
@@ -133,14 +133,8 @@ export function ComponentPreview({
       `}</style>
       {(title || description) && (
         <div className="flex flex-col space-y-1.5 p-6 border-b border-border/50">
-          {title && (
-            <h3 className="font-semibold leading-none tracking-tight">
-              {title}
-            </h3>
-          )}
-          {description && (
-            <p className="text-sm text-muted-foreground">{description}</p>
-          )}
+          {title && <h3 className="font-semibold leading-none tracking-tight">{title}</h3>}
+          {description && <p className="text-sm text-muted-foreground">{description}</p>}
         </div>
       )}
 
@@ -165,7 +159,7 @@ export function ComponentPreview({
       <div
         className={cn(
           "grid transition-all duration-300 ease-in-out border-t border-border/50 bg-[#0d1117]",
-          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         )}
       >
         <div className="overflow-hidden min-w-0 min-h-0">
@@ -185,17 +179,11 @@ export function ComponentPreview({
                 <span className="sr-only">Copy code</span>
               </Button>
             </div>
-            <ScrollArea
-              className="max-h-100 w-full h-full"
-              type="auto"
-              orientation="both"
-            >
+            <ScrollArea className="max-h-100 w-full h-full" type="auto" orientation="both">
               <div className="p-4 pt-4 pr-10">
                 <pre
-                  className={cn(
-                    `language-${language}`,
-                    "bg-transparent! p-0! m-0! border-0!",
-                  )}
+                  className={cn(`language-${language}`, "bg-transparent! p-0! m-0! border-0!")}
+                  suppressHydrationWarning
                 >
                   <code className={`language-${language}`}>{code}</code>
                 </pre>

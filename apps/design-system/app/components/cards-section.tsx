@@ -18,9 +18,7 @@ export function CardsSection() {
           <Layout className="size-3.5" />
           Component: Card
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Cards
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Cards</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Displays a card with header, content, and footer.
         </p>
@@ -81,9 +79,7 @@ import { Bell, ChevronRight } from "lucide-react";
                 <Bell className="size-5 text-primary" />
               </div>
               <CardTitle>Activity Feed</CardTitle>
-              <CardDescription>
-                Real-time updates from your campus.
-              </CardDescription>
+              <CardDescription>Real-time updates from your campus.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               {[1, 2].map((i) => (
@@ -94,9 +90,7 @@ import { Bell, ChevronRight } from "lucide-react";
                   <div className="size-2 rounded-full bg-primary animate-pulse" />
                   <div className="flex-1">
                     <p className="text-sm font-bold">New Listing: iPhone 15</p>
-                    <p className="text-xs text-muted-foreground">
-                      Posted in Electronics • 2m ago
-                    </p>
+                    <p className="text-xs text-muted-foreground">Posted in Electronics • 2m ago</p>
                   </div>
                   <ChevronRight className="size-4 text-muted-foreground" />
                 </div>

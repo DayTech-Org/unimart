@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@unimart/ui";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@unimart/ui";
 import { AlertCircle, Clock, HelpCircle, Info, Sparkles } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
@@ -17,9 +12,7 @@ export function TooltipSection() {
           <Info className="size-3.5" />
           Component: Tooltip
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Tooltip
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Tooltip</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Contextual help for marketplace terminology.
         </p>
@@ -117,8 +110,7 @@ import { AlertCircle, Clock, HelpCircle, Sparkles } from "lucide-react";
                       <Clock className="size-3" /> Used - Good
                     </h5>
                     <p className="text-xs text-muted-foreground leading-relaxed">
-                      Minor cosmetic wear. Fully functional. No structural
-                      damage.
+                      Minor cosmetic wear. Fully functional. No structural damage.
                     </p>
                   </div>
                 </TooltipContent>

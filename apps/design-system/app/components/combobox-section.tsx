@@ -1,19 +1,20 @@
 "use client";
 
-import * as React from "react";
-import { Check, ChevronsUpDown, Command as CommandIcon } from "lucide-react";
-
-import { cn } from "@unimart/ui";
-import { Button } from "@unimart/ui";
 import {
+  Button,
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
+  cn,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
 } from "@unimart/ui";
-import { Popover, PopoverContent, PopoverTrigger } from "@unimart/ui";
+import { Check, ChevronsUpDown, Command as CommandIcon } from "lucide-react";
+import * as React from "react";
 import { ComponentPreview } from "./component-preview";
 
 const categories = [
@@ -50,9 +51,7 @@ export function ComboboxSection() {
           <CommandIcon className="size-3.5" />
           Component: Combobox
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Combobox
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Combobox</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Autocomplete input and command palette with a list of suggestions.
         </p>
@@ -136,8 +135,7 @@ export function ComboboxDemo() {
                 className="w-[200px] justify-between"
               >
                 {value
-                  ? categories.find((category) => category.value === value)
-                      ?.label
+                  ? categories.find((category) => category.value === value)?.label
                   : "Select category..."}
                 <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
               </Button>
@@ -160,9 +158,7 @@ export function ComboboxDemo() {
                         <Check
                           className={cn(
                             "mr-2 h-4 w-4",
-                            value === category.value
-                              ? "opacity-100"
-                              : "opacity-0",
+                            value === category.value ? "opacity-100" : "opacity-0"
                           )}
                         />
                         {category.label}

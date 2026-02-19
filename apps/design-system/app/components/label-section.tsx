@@ -1,6 +1,5 @@
-import { Label } from "@unimart/ui";
+import { Checkbox, Label } from "@unimart/ui";
 import { Tag } from "lucide-react";
-import { Checkbox } from "@unimart/ui";
 import { ComponentPreview } from "./component-preview";
 
 export function LabelSection() {
@@ -11,9 +10,7 @@ export function LabelSection() {
           <Tag className="size-3.5" />
           Component: Label
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Label
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Label</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Renders an accessible label associated with controls.
         </p>
@@ -33,9 +30,7 @@ export function LabelSection() {
       >
         <div className="flex items-center space-x-2">
           <Checkbox id="verify-student" />
-          <Label htmlFor="verify-student">
-            I agree to verify my student status
-          </Label>
+          <Label htmlFor="verify-student">I agree to verify my student status</Label>
         </div>
       </ComponentPreview>
     </section>

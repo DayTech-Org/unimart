@@ -10,9 +10,7 @@ export function BadgeSection() {
           <Tag className="size-3.5" />
           Component: Badge
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Badges
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Badges</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Status indicators and labels for high-density data.
         </p>

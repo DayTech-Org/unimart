@@ -1,8 +1,5 @@
 "use client";
 
-import * as React from "react";
-import { MessageSquare } from "lucide-react";
-
 import {
   Button,
   Dialog,
@@ -15,6 +12,7 @@ import {
   Input,
   Label,
 } from "@unimart/ui";
+import { MessageSquare } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function ModalSection() {
@@ -25,12 +23,10 @@ export function ModalSection() {
           <MessageSquare className="size-3.5" />
           Component: Modal
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Modal
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Modal</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          A window overlaid on either the primary window or another dialog
-          window, rendering the content underneath inert.
+          A window overlaid on either the primary window or another dialog window, rendering the
+          content underneath inert.
         </p>
       </div>
 
@@ -91,8 +87,7 @@ export function ModalSection() {
               <DialogHeader>
                 <DialogTitle>Edit profile</DialogTitle>
                 <DialogDescription>
-                  Make changes to your profile here. Click save when you&apos;re
-                  done.
+                  Make changes to your profile here. Click save when you&apos;re done.
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 py-4">
@@ -106,11 +101,7 @@ export function ModalSection() {
                   <Label htmlFor="username" className="text-right">
                     Username
                   </Label>
-                  <Input
-                    id="username"
-                    value="@Lymore01"
-                    className="col-span-3"
-                  />
+                  <Input id="username" value="@Lymore01" className="col-span-3" />
                 </div>
               </div>
               <DialogFooter>

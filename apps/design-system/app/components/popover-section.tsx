@@ -1,14 +1,14 @@
 "use client";
 
 import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  Button,
+  Label,
   Popover,
   PopoverContent,
   PopoverTrigger,
-  Button,
-  Label,
-  Avatar,
-  AvatarImage,
-  AvatarFallback,
 } from "@unimart/ui";
 import { MessageSquare } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
@@ -21,9 +21,7 @@ export function PopoverSection() {
           <MessageSquare className="size-3.5" />
           Component: Popover
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Popover
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Popover</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Displays rich content in a portal, triggered by a button.
         </p>
@@ -90,9 +88,7 @@ export function PopoverSection() {
                   </Avatar>
                   <div>
                     <h4 className="font-medium">Kimi</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Computer Science &apos;25
-                    </p>
+                    <p className="text-sm text-muted-foreground">Computer Science &apos;25</p>
                   </div>
                 </div>
                 <div className="grid gap-2">

@@ -1,6 +1,8 @@
 "use client";
 
 import {
+  Button,
+  Checkbox,
   Drawer,
   DrawerClose,
   DrawerContent,
@@ -9,11 +11,9 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-  Checkbox,
   Input,
   Label,
 } from "@unimart/ui";
-import { Button } from "@unimart/ui";
 import { PanelBottom } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
@@ -25,9 +25,7 @@ export function DrawerSection() {
           <PanelBottom className="size-3.5" />
           Component: Drawer
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Drawer
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Drawer</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           A slide-out panel for navigation, filters, and additional context.
         </p>
@@ -139,19 +137,13 @@ export function DrawerSection() {
                     <Label className="text-base">Price Range</Label>
                     <div className="flex items-center gap-4">
                       <div className="grid gap-1.5 flex-1">
-                        <Label
-                          htmlFor="min-price"
-                          className="text-xs text-muted-foreground"
-                        >
+                        <Label htmlFor="min-price" className="text-xs text-muted-foreground">
                           Min ($)
                         </Label>
                         <Input id="min-price" type="number" placeholder="0" />
                       </div>
                       <div className="grid gap-1.5 flex-1">
-                        <Label
-                          htmlFor="max-price"
-                          className="text-xs text-muted-foreground"
-                        >
+                        <Label htmlFor="max-price" className="text-xs text-muted-foreground">
                           Max ($)
                         </Label>
                         <Input id="max-price" type="number" placeholder="500" />

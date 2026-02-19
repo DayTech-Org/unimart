@@ -37,9 +37,7 @@ export function ButtonsSection() {
           <MousePointer2 className="size-3.5" />
           Component: Button
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Buttons
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Buttons</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           With built-in micro-interactions.
         </p>
@@ -170,9 +168,7 @@ import { Loader2 } from "lucide-react";
       </div>
 
       {/* Micro-interactions */}
-      <h3 className="text-xl font-heading font-semibold mt-12 mb-6">
-        Micro-interactions
-      </h3>
+      <h3 className="text-xl font-heading font-semibold mt-12 mb-6">Micro-interactions</h3>
       <ComponentPreview
         title="Interactive Buttons"
         description="Dynamic states that provide immediate feedback to user actions."
@@ -236,11 +232,7 @@ import { useState } from "react";
           </Button>
 
           {/* Loading to Success */}
-          <Button
-            onClick={handleAction}
-            disabled={loading}
-            className="w-32 transition-all"
-          >
+          <Button onClick={handleAction} disabled={loading} className="w-32 transition-all">
             {loading ? (
               <Loader2 className="mr-2 size-4 animate-spin" />
             ) : (

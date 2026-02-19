@@ -24,9 +24,7 @@ export function DialogSection() {
           <MessageSquare className="size-3.5" />
           Component: Dialog
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Dialog
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Dialog</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Complex interactions (e.g., Negotiation).
         </p>
@@ -102,9 +100,7 @@ import { DollarSign, Info } from "lucide-react";
 </Dialog>`}
         >
           <div className="space-y-4">
-            <h4 className="text-lg font-heading font-semibold">
-              Make an Offer
-            </h4>
+            <h4 className="text-lg font-heading font-semibold">Make an Offer</h4>
             <Dialog>
               <DialogTrigger asChild>
                 <Button className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-900/20">
@@ -116,8 +112,7 @@ import { DollarSign, Info } from "lucide-react";
                   <DialogTitle>Make an Offer</DialogTitle>
                   <DialogDescription>
                     The seller has listed this item for{" "}
-                    <span className="font-bold text-foreground">KES 4,500</span>
-                    .
+                    <span className="font-bold text-foreground">KES 4,500</span>.
                   </DialogDescription>
                 </DialogHeader>
 
@@ -128,15 +123,12 @@ import { DollarSign, Info } from "lucide-react";
                       <span className="absolute left-3 top-2.5 text-muted-foreground text-sm font-medium">
                         KES
                       </span>
-                      <Input
-                        className="pl-12"
-                        placeholder="4500"
-                        type="number"
-                      />
+                      <Input className="pl-12" placeholder="4500" type="number" />
                     </div>
                     <div className="flex gap-2">
                       {["-5%", "-10%", "-20%"].map((discount) => (
                         <button
+                          type="button"
                           key={discount}
                           className="text-xs border rounded-full px-3 py-1 hover:bg-muted transition-colors"
                         >

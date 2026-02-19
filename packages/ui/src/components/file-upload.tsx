@@ -1,8 +1,8 @@
 "use client";
 
-import * as React from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { CloudUpload, File as FileIcon, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import * as React from "react";
 import { cn } from "../lib/utils";
 import { Button } from "./button";
 
@@ -38,6 +38,7 @@ export function FileUpload({
   };
 
   const validateFiles = (newFiles: File[]) => {
+    // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: Validation logic is complex
     const validFiles = newFiles.filter((file) => {
       // Size check
       if (file.size > maxSize) {
@@ -111,7 +112,7 @@ export function FileUpload({
     }
   };
 
-  const removeFile = (indexToRemove: number) => {
+  const _removeFile = (indexToRemove: number) => {
     const newFiles = files.filter((_, index) => index !== indexToRemove);
     setFiles(newFiles);
     onFilesSelected(newFiles);
@@ -139,7 +140,7 @@ export function FileUpload({
           "relative flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-xl transition-colors cursor-pointer overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
           dragActive
             ? "border-primary bg-primary/5"
-            : "border-muted-foreground/25 hover:border-primary/50 hover:bg-muted/25",
+            : "border-muted-foreground/25 hover:border-primary/50 hover:bg-muted/25"
         )}
         onDragEnter={handleDrag}
         onDragLeave={handleDrag}
@@ -168,9 +169,7 @@ export function FileUpload({
           </div>
           <div className="space-y-1">
             <p className="text-sm font-medium text-foreground">
-              <span className="text-primary cursor-pointer hover:underline">
-                Click to upload
-              </span>{" "}
+              <span className="text-primary cursor-pointer hover:underline">Click to upload</span>{" "}
               or drag and drop
             </p>
             <p className="text-xs text-muted-foreground uppercase">
@@ -186,9 +185,7 @@ export function FileUpload({
             exit={{ opacity: 0 }}
             className="absolute inset-0 bg-primary/10 flex items-center justify-center backdrop-blur-[1px]"
           >
-            <p className="text-lg font-semibold text-primary">
-              Drop files here
-            </p>
+            <p className="text-lg font-semibold text-primary">Drop files here</p>
           </motion.div>
         )}
       </motion.div>
@@ -206,12 +203,7 @@ export function FileUpload({
                 {files.length} file{files.length > 1 ? "s" : ""} selected
               </span>
               <span>
-                Total size:{" "}
-                {(
-                  files.reduce((acc, f) => acc + f.size, 0) /
-                  1024 /
-                  1024
-                ).toFixed(2)}{" "}
+                Total size: {(files.reduce((acc, f) => acc + f.size, 0) / 1024 / 1024).toFixed(2)}{" "}
                 MB
               </span>
             </div>
@@ -228,9 +220,7 @@ export function FileUpload({
                     <FileIcon className="w-4 h-4 text-muted-foreground" />
                   </div>
                   <div className="flex flex-col min-w-0">
-                    <span className="text-sm font-medium truncate">
-                      {file.name}
-                    </span>
+                    <span className="text-sm font-medium truncate">{file.name}</span>
                     <span className="text-xs text-muted-foreground">
                       {(file.size / 1024).toFixed(1)} KB
                     </span>

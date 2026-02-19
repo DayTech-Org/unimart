@@ -1,9 +1,7 @@
 "use client";
 
-import * as React from "react";
-import { ToggleLeft } from "lucide-react";
-
 import { Label, Switch } from "@unimart/ui";
+import { ToggleLeft } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function SwitchSection() {
@@ -14,12 +12,9 @@ export function SwitchSection() {
           <ToggleLeft className="size-3.5" />
           Component: Switch
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Switch
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Switch</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          A control that allows the user to toggle between checked and not
-          checked.
+          A control that allows the user to toggle between checked and not checked.
         </p>
       </div>
 

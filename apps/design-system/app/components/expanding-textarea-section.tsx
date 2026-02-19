@@ -12,9 +12,7 @@ export function ExpandingTextareaSection() {
           <TextSelect className="size-3.5" />
           Component: Expanding Textarea
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Expanding Textarea
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Expanding Textarea</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           A textarea that automatically expands as you type.
         </p>

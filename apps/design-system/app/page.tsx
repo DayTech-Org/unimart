@@ -1,84 +1,84 @@
 "use client";
 
 import {
+  AlertCircle,
+  Bell,
+  Calendar,
+  CaseSensitive,
+  CheckSquare,
+  ChevronRight,
+  Command,
+  Copy,
+  FileText,
+  Ghost,
   Info,
   Layers,
   Layout,
   List,
+  Loader2,
+  Menu,
   MessageSquare,
   MousePointer2,
-  Palette,
   PaintBucket,
-  AlertCircle,
-  Tag,
-  Table,
-  Type,
-  User,
-  ChevronRight,
-  Copy,
-  CheckSquare,
-  Command,
-  Calendar,
+  Palette,
   PanelBottom,
-  Menu,
-  TextSelect,
-  FileText,
-  CaseSensitive,
-  Bell,
-  Loader2,
   PanelRight,
+  PenTool,
+  QrCode,
+  Store,
+  Table,
+  Tag,
+  TextSelect,
   ToggleLeft,
   ToggleRight,
+  Type,
   Upload,
-  Store,
-  Ghost,
-  QrCode,
-  PenTool,
+  User,
 } from "lucide-react";
-import { BadgeSection } from "./components/badge-section";
-import { AlertSection } from "./components/alert-section";
-import { TableSection } from "./components/table-section";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { AccordionSection } from "./components/accordion-section";
+import { AlertSection } from "./components/alert-section";
 import { AvatarSection } from "./components/avatar-section";
+import { BadgeSection } from "./components/badge-section";
+import { BreadcrumbSection } from "./components/breadcrumb-section";
 import { ButtonsSection } from "./components/buttons-section";
 import { CardsSection } from "./components/cards-section";
-import { ColorsSection } from "./components/colors-section";
-import { ThemesSection } from "./components/themes-section";
-import { DialogSection } from "./components/dialog-section";
-import { HeroSection } from "./components/hero-section";
-import { Sidebar } from "./components/sidebar";
-import { TabsSection } from "./components/tabs-section";
-import { TooltipSection } from "./components/tooltip-section";
-import { TypographySection } from "./components/typography-section";
-import { CopywritingSection } from "./components/copywriting-section";
-import { BreadcrumbSection } from "./components/breadcrumb-section";
 import { CarouselSection } from "./components/carousel-section";
 import { CheckboxSection } from "./components/checkbox-section";
+import { ColorsSection } from "./components/colors-section";
 import { ComboboxSection } from "./components/combobox-section";
+import { CommandMenu } from "./components/command-menu";
+import { CopywritingSection } from "./components/copywriting-section";
 import { DatePickerSection } from "./components/date-picker-section";
+import { DialogSection } from "./components/dialog-section";
 import { DrawerSection } from "./components/drawer-section";
 import { DropdownMenuSection } from "./components/dropdown-menu-section";
+import { EmptyStateSection } from "./components/empty-state-section";
 import { ExpandingTextareaSection } from "./components/expanding-textarea-section";
+import { FileUploadSection } from "./components/file-upload-section";
 import { FormSection } from "./components/form-section";
+import { HandshakeSection } from "./components/handshake-section";
+import { HeroSection } from "./components/hero-section";
 import { InputSection } from "./components/input-section";
 import { LabelSection } from "./components/label-section";
+import { MarketplaceSection } from "./components/marketplace-section";
+import { MobileNav } from "./components/mobile-nav";
+import { ModalSection } from "./components/modal-section";
 import { PopoverSection } from "./components/popover-section";
-import { TextareaSection } from "./components/textarea-section";
 import { SelectSection } from "./components/select-section";
 import { SheetSection } from "./components/sheet-section";
+import { Sidebar } from "./components/sidebar";
 import { SkeletonSection } from "./components/skeleton-section";
 import { SonnerSection } from "./components/sonner-section";
 import { SwitchSection } from "./components/switch-section";
+import { TableSection } from "./components/table-section";
+import { TabsSection } from "./components/tabs-section";
+import { TextareaSection } from "./components/textarea-section";
+import { ThemesSection } from "./components/themes-section";
 import { ToggleSection } from "./components/toggle-section";
-import { ModalSection } from "./components/modal-section";
-import { FileUploadSection } from "./components/file-upload-section";
-import Link from "next/link";
-import { MobileNav } from "./components/mobile-nav";
-import { CommandMenu } from "./components/command-menu";
-import { useEffect, useState } from "react";
-import { EmptyStateSection } from "./components/empty-state-section";
-import { MarketplaceSection } from "./components/marketplace-section";
-import { HandshakeSection } from "./components/handshake-section";
+import { TooltipSection } from "./components/tooltip-section";
+import { TypographySection } from "./components/typography-section";
 
 const uiSections = [
   { id: "overview", label: "Overview", icon: Store },
@@ -152,11 +152,10 @@ function ScrollToTopButton() {
 
   return (
     <button
+      type="button"
       onClick={scrollToTop}
       className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-all duration-300 ${
-        show
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-10 pointer-events-none"
+        show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
       }`}
       aria-label="Scroll to top"
     >
@@ -272,9 +271,7 @@ export default function DesignSystemPage() {
           <footer className="py-8 border-t border-border/40 mt-16 md:mt-24 w-full font-lexend">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 px-4 md:px-0 text-center md:text-left">
               <div className="flex items-center gap-2">
-                <p className="text-sm text-muted-foreground/40">
-                  Built by Unimart design team.
-                </p>
+                <p className="text-sm text-muted-foreground/40">Built by Unimart design team.</p>
               </div>
 
               <div className="flex items-center">

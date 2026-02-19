@@ -1,23 +1,7 @@
-import * as React from "react";
+import { Avatar, AvatarFallback, AvatarImage, Badge, Button, cn } from "@unimart/ui";
 import { cva, type VariantProps } from "class-variance-authority";
-import {
-  cn,
-  Avatar,
-  AvatarImage,
-  AvatarFallback,
-  Badge,
-  Button,
-} from "@unimart/ui";
-import {
-  CheckCircle2,
-  MapPin,
-  ShieldCheck,
-  Star,
-  ArrowRight,
-  Navigation,
-  Camera,
-  QrCode,
-} from "lucide-react";
+import { ArrowRight, Camera, MapPin, Navigation, QrCode, ShieldCheck, Star } from "lucide-react";
+import type * as React from "react";
 
 // --- Condition Badge Pattern ---
 const conditionBadgeVariants = cva(
@@ -26,8 +10,7 @@ const conditionBadgeVariants = cva(
     variants: {
       condition: {
         new: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
-        "like-new":
-          "border-transparent bg-emerald-500 text-white hover:bg-emerald-500/80",
+        "like-new": "border-transparent bg-emerald-500 text-white hover:bg-emerald-500/80",
         good: "border-transparent bg-blue-500 text-white hover:bg-blue-500/80",
         fair: "border-transparent bg-accent text-accent-foreground hover:bg-accent/80",
         poor: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
@@ -36,21 +19,16 @@ const conditionBadgeVariants = cva(
     defaultVariants: {
       condition: "new",
     },
-  },
+  }
 );
 
 export interface ConditionBadgeProps
-  extends
-    React.HTMLAttributes<HTMLDivElement>,
+  extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof conditionBadgeVariants> {
   condition?: "new" | "like-new" | "good" | "fair" | "poor";
 }
 
-function ConditionBadge({
-  className,
-  condition,
-  ...props
-}: ConditionBadgeProps) {
+function ConditionBadge({ className, condition, ...props }: ConditionBadgeProps) {
   const labels = {
     new: "Brand New",
     "like-new": "Like New",
@@ -60,10 +38,7 @@ function ConditionBadge({
   };
 
   return (
-    <div
-      className={cn(conditionBadgeVariants({ condition }), className)}
-      {...props}
-    >
+    <div className={cn(conditionBadgeVariants({ condition }), className)} {...props}>
       {labels[condition || "new"]}
     </div>
   );
@@ -93,7 +68,7 @@ function SellerCard({
     <div
       className={cn(
         "group relative flex items-center space-x-4 rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/50 hover:shadow-md",
-        className,
+        className
       )}
       {...props}
     >
@@ -106,10 +81,7 @@ function SellerCard({
           <div className="flex items-center gap-1.5">
             <h4 className="text-sm font-semibold leading-none">{name}</h4>
             {isVerifiedStudent && (
-              <ShieldCheck
-                className="h-3.5 w-3.5 text-emerald-500"
-                aria-label="Verified Student"
-              />
+              <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" aria-label="Verified Student" />
             )}
           </div>
           {rating > 0 && (
@@ -122,12 +94,8 @@ function SellerCard({
           )}
         </div>
         <div className="flex items-center text-xs text-muted-foreground">
-          {major && (
-            <span className="mr-2 truncate max-w-[120px]">{major}</span>
-          )}
-          <span className="text-xs text-muted-foreground/60">
-            • {totalReviews} reviews
-          </span>
+          {major && <span className="mr-2 truncate max-w-[120px]">{major}</span>}
+          <span className="text-xs text-muted-foreground/60">• {totalReviews} reviews</span>
         </div>
       </div>
     </div>
@@ -151,7 +119,7 @@ function SafetyZoneCard({
     <div
       className={cn(
         "group relative overflow-hidden rounded-3xl border border-border bg-card dark:bg-card/5 backdrop-blur-xl transition-all duration-500 hover:border-primary/50",
-        className,
+        className
       )}
       {...props}
     >
@@ -189,9 +157,7 @@ function SafetyZoneCard({
             </div>
           </div>
 
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            {description}
-          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <div className="flex items-center gap-1.5 text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-md border border-primary/20">

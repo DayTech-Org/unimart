@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react";
-import { List } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -11,6 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@unimart/ui";
+import { List } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function SelectSection() {
@@ -21,12 +20,9 @@ export function SelectSection() {
           <List className="size-3.5" />
           Component: Select
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Select
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Select</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          Displays a list of options for the user to pick from—triggered by a
-          button.
+          Displays a list of options for the user to pick from—triggered by a button.
         </p>
       </div>
 

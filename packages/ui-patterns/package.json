@@ -16,6 +16,7 @@
     "lucide-react": "^0.564.0",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "react-qr-code": "^2.0.18",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

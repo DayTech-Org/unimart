@@ -1,13 +1,9 @@
 "use client";
 
-import * as React from "react";
+import { Button, Calendar, cn, Label, Popover, PopoverContent, PopoverTrigger } from "@unimart/ui";
 import { format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
-
-import { cn } from "@unimart/ui";
-import { Button } from "@unimart/ui";
-import { Calendar } from "@unimart/ui";
-import { Popover, PopoverContent, PopoverTrigger, Label } from "@unimart/ui";
+import * as React from "react";
 import { ComponentPreview } from "./component-preview";
 
 export function DatePickerSection() {
@@ -23,9 +19,7 @@ export function DatePickerSection() {
           <CalendarIcon className="size-3.5" />
           Component: Date Picker
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Date Picker
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Date Picker</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           A date range picker with presets.
         </p>
@@ -106,15 +100,14 @@ export function DatePickerWithPresets() {
                   variant={"outline"}
                   className={cn(
                     "w-[300px] justify-start text-left font-normal",
-                    !date && "text-muted-foreground",
+                    !date && "text-muted-foreground"
                   )}
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   {date?.from ? (
                     date.to ? (
                       <>
-                        {format(date.from, "LLL dd, y")} -{" "}
-                        {format(date.to, "LLL dd, y")}
+                        {format(date.from, "LLL dd, y")} - {format(date.to, "LLL dd, y")}
                       </>
                     ) : (
                       format(date.from, "LLL dd, y")
@@ -130,9 +123,7 @@ export function DatePickerWithPresets() {
                     <Button
                       variant="ghost"
                       className="justify-start font-normal"
-                      onClick={() =>
-                        setDate({ from: new Date(), to: new Date() })
-                      }
+                      onClick={() => setDate({ from: new Date(), to: new Date() })}
                     >
                       Today
                     </Button>
@@ -176,11 +167,7 @@ export function DatePickerWithPresets() {
                       className="justify-start font-normal"
                       onClick={() => {
                         const today = new Date();
-                        const firstDay = new Date(
-                          today.getFullYear(),
-                          today.getMonth(),
-                          1,
-                        );
+                        const firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
                         setDate({ from: firstDay, to: today });
                       }}
                     >

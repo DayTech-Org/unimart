@@ -1,11 +1,7 @@
 "use client";
 
-import {
-  ConditionBadge,
-  SafetyZoneCard,
-  SellerCard,
-} from "@unimart/ui-patterns";
-import { BadgeCheck, Scale, ShieldCheck, Users } from "lucide-react";
+import { ConditionBadge, SafetyZoneCard, SellerCard } from "@unimart/ui-patterns";
+import { BadgeCheck } from "lucide-react";
 import { ComponentPreview } from "./component-preview";
 
 export function MarketplaceSection() {
@@ -16,14 +12,11 @@ export function MarketplaceSection() {
           <BadgeCheck className="size-3.5" />
           Pattern: Marketplace
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Student Marketplace
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Student Marketplace</h3>
         <p className="text-muted-foreground max-w-2xl font-sans text-lg">
-          UI patterns designed specifically for peer-to-peer student
-          transactions, focusing on <span className="font-medium">trust</span>,{" "}
-          <span className="font-medium">clarity</span>, and{" "}
-          <span className="font-medium">safety</span>.
+          UI patterns designed specifically for peer-to-peer student transactions, focusing on{" "}
+          <span className="font-medium">trust</span>, <span className="font-medium">clarity</span>,
+          and <span className="font-medium">safety</span>.
         </p>
       </div>
 
@@ -50,8 +43,7 @@ export function MarketplaceSection() {
               <ConditionBadge condition="poor" />
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Standardized visual indicators help students quickly assess item
-              quality at a glance.
+              Standardized visual indicators help students quickly assess item quality at a glance.
             </p>
           </div>
         </ComponentPreview>

@@ -1,7 +1,7 @@
 "use client";
 
-import { Moon, PaintBucket, Sun, Monitor, Palette } from "lucide-react";
 import { useTheme } from "@unimart/ui";
+import { Monitor, Moon, PaintBucket, Palette, Sun } from "lucide-react";
 import { useSyncExternalStore } from "react";
 
 const emptySubscribe = () => () => {};
@@ -11,7 +11,7 @@ export function ThemesSection() {
   const mounted = useSyncExternalStore(
     emptySubscribe,
     () => true,
-    () => false,
+    () => false
   );
 
   if (!mounted) {
@@ -22,12 +22,9 @@ export function ThemesSection() {
             <PaintBucket className="size-3.5" />
             Foundation: Theming
           </div>
-          <h3 className="text-3xl font-heading font-bold text-foreground">
-            Theming
-          </h3>
+          <h3 className="text-3xl font-heading font-bold text-foreground">Theming</h3>
           <p className="text-muted-foreground max-w-2xl font-sans">
-            Built-in support for light, mango and dark modes with a robust CSS
-            variable system.
+            Built-in support for light, mango and dark modes with a robust CSS variable system.
           </p>
         </div>
         <div className="h-[400px] w-full bg-muted/10 animate-pulse rounded-xl" />
@@ -42,12 +39,9 @@ export function ThemesSection() {
           <PaintBucket className="size-3.5" />
           Foundation: Theming
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Theming
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Theming</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
-          Built-in support for light, mango and dark modes with a robust CSS
-          variable system.
+          Built-in support for light, mango and dark modes with a robust CSS variable system.
         </p>
       </div>
 
@@ -58,6 +52,7 @@ export function ThemesSection() {
             <h4 className="text-lg font-heading font-semibold">Preview</h4>
             <div className="flex bg-muted/50 p-1 rounded-lg border border-border/50">
               <button
+                type="button"
                 onClick={() => setTheme("light")}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
                   theme === "light"
@@ -69,6 +64,7 @@ export function ThemesSection() {
                 Light
               </button>
               <button
+                type="button"
                 onClick={() => setTheme("dark")}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
                   theme === "dark"
@@ -80,6 +76,7 @@ export function ThemesSection() {
                 Dark
               </button>
               <button
+                type="button"
                 onClick={() => setTheme("system")}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
                   theme === "system"
@@ -91,6 +88,7 @@ export function ThemesSection() {
                 System
               </button>
               <button
+                type="button"
                 onClick={() => setTheme("mango")}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
                   theme === "mango"
@@ -117,11 +115,7 @@ export function ThemesSection() {
                     <div>
                       <h5 className="font-bold text-sm">Theme Card</h5>
                       <p className="text-xs text-muted-foreground">
-                        Testing{" "}
-                        {theme === "system"
-                          ? `system (${resolvedTheme})`
-                          : theme}{" "}
-                        mode
+                        Testing {theme === "system" ? `system (${resolvedTheme})` : theme} mode
                       </p>
                     </div>
                   </div>
@@ -132,10 +126,16 @@ export function ThemesSection() {
                   </div>
 
                   <div className="pt-2 flex gap-2">
-                    <button className="flex-1 bg-primary text-primary-foreground text-xs font-medium py-2 rounded-md hover:bg-primary/90 transition-colors">
+                    <button
+                      type="button"
+                      className="flex-1 bg-primary text-primary-foreground text-xs font-medium py-2 rounded-md hover:bg-primary/90 transition-colors"
+                    >
                       Primary
                     </button>
-                    <button className="flex-1 bg-secondary text-secondary-foreground text-xs font-medium py-2 rounded-md hover:bg-secondary/80 transition-colors">
+                    <button
+                      type="button"
+                      className="flex-1 bg-secondary text-secondary-foreground text-xs font-medium py-2 rounded-md hover:bg-secondary/80 transition-colors"
+                    >
                       Secondary
                     </button>
                   </div>
@@ -158,24 +158,20 @@ export function ThemesSection() {
             <h4 className="text-lg font-heading font-semibold">Usage</h4>
             <div className="space-y-2">
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Themes are managed via <code>next-themes</code> which toggles
-                the data-theme attribute on the root element.
+                Themes are managed via <code>next-themes</code> which toggles the data-theme
+                attribute on the root element.
               </p>
               <div className="relative group">
                 <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative rounded-lg border border-border bg-card/50 p-4 font-mono text-xs text-muted-foreground">
                   <div className="flex gap-2">
                     <span className="text-pink-500">const</span>
-                    <span className="text-foreground">
-                      &#123; setTheme &#125;
-                    </span>
+                    <span className="text-foreground">&#123; setTheme &#125;</span>
                     <span className="text-blue-500">=</span>
                     <span className="text-yellow-500">useTheme</span>
                     <span className="text-foreground">()</span>
                   </div>
-                  <div className="mt-2 text-foreground/50">
-                    {`// Switch to dark mode`}
-                  </div>
+                  <div className="mt-2 text-foreground/50">{`// Switch to dark mode`}</div>
                   <div className="flex gap-2">
                     <span className="text-yellow-500">setTheme</span>
                     <span className="text-foreground">(</span>
@@ -188,9 +184,7 @@ export function ThemesSection() {
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-lg font-heading font-semibold">
-              Available Tokens
-            </h4>
+            <h4 className="text-lg font-heading font-semibold">Available Tokens</h4>
             <div className="grid grid-cols-2 gap-3">
               {[
                 { name: "--background", desc: "Page background" },
@@ -204,12 +198,8 @@ export function ThemesSection() {
                   key={token.name}
                   className="flex flex-col gap-1 p-3 rounded-lg border border-border bg-card/30"
                 >
-                  <code className="text-xs font-mono text-primary font-bold">
-                    {token.name}
-                  </code>
-                  <span className="text-[10px] text-muted-foreground">
-                    {token.desc}
-                  </span>
+                  <code className="text-xs font-mono text-primary font-bold">{token.name}</code>
+                  <span className="text-[10px] text-muted-foreground">{token.desc}</span>
                 </div>
               ))}
             </div>

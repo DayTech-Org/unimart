@@ -1,25 +1,17 @@
 import {
-  PenTool,
-  Check,
-  X,
-  AlertCircle,
-  HelpCircle,
-  Layout,
-  Loader2,
-} from "lucide-react";
-import {
-  Button,
-  Badge,
   Alert,
-  AlertTitle,
   AlertDescription,
+  AlertTitle,
+  Badge,
+  Button,
+  Input,
+  Label,
   Tooltip,
-  TooltipTrigger,
   TooltipContent,
   TooltipProvider,
-  Label,
-  Input,
+  TooltipTrigger,
 } from "@unimart/ui";
+import { AlertCircle, Check, HelpCircle, Layout, Loader2, PenTool } from "lucide-react";
 
 export function CopywritingSection() {
   return (
@@ -29,9 +21,7 @@ export function CopywritingSection() {
           <PenTool className="size-3.5" />
           Foundation: Copywriting
         </div>
-        <h3 className="text-3xl font-heading font-bold text-foreground">
-          Copywriting
-        </h3>
+        <h3 className="text-3xl font-heading font-bold text-foreground">Copywriting</h3>
         <p className="text-muted-foreground max-w-2xl font-sans">
           Guidelines for writing clear, consistent, and user-focused UI copy.
         </p>
@@ -40,17 +30,11 @@ export function CopywritingSection() {
       <div className="space-y-12">
         {/* Section 1: Use verbs, not nouns */}
         <div className="space-y-4">
-          <h4 className="text-xl font-heading font-semibold">
-            Use verbs, not nouns
-          </h4>
+          <h4 className="text-xl font-heading font-semibold">Use verbs, not nouns</h4>
           <div className="rounded-xl border border-border bg-card/50 p-12 flex flex-col items-center justify-center gap-8">
             <div className="grid grid-cols-2 gap-x-16 gap-y-6 text-center">
-              <div className="text-sm font-medium text-muted-foreground mb-2">
-                Bad Example
-              </div>
-              <div className="text-sm font-medium text-muted-foreground mb-2">
-                Good Example
-              </div>
+              <div className="text-sm font-medium text-muted-foreground mb-2">Bad Example</div>
+              <div className="text-sm font-medium text-muted-foreground mb-2">Good Example</div>
 
               {/* Set 1 */}
               <div className="flex justify-center">
@@ -111,9 +95,7 @@ export function CopywritingSection() {
 
         {/* Section 2: Component Guidelines */}
         <div className="space-y-4">
-          <h4 className="text-xl font-heading font-semibold">
-            Component Guidelines
-          </h4>
+          <h4 className="text-xl font-heading font-semibold">Component Guidelines</h4>
           <div className="grid gap-6">
             {/* Forms & Labels */}
             <div className="rounded-xl border border-border overflow-hidden">
@@ -125,26 +107,20 @@ export function CopywritingSection() {
               </div>
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
                 <div className="p-6 space-y-4 bg-card/30">
-                  <div className="text-sm font-medium text-destructive mb-2">
-                    Bad
-                  </div>
+                  <div className="text-sm font-medium text-destructive mb-2">Bad</div>
                   <div className="space-y-4">
                     <div className="space-y-2">
-                      <Label className="text-muted-foreground">
-                        User&apos;s Full Name:
-                      </Label>
+                      <Label className="text-muted-foreground">User&apos;s Full Name:</Label>
                       <Input placeholder="Input your name here..." disabled />
                     </div>
                     <p className="text-xs text-muted-foreground">
-                      Labels shouldn&apos;t have colons. Placeholders
-                      shouldn&apos;t repeat the label.
+                      Labels shouldn&apos;t have colons. Placeholders shouldn&apos;t repeat the
+                      label.
                     </p>
                   </div>
                 </div>
                 <div className="p-6 space-y-4 bg-card/30">
-                  <div className="text-sm font-medium text-green-600 mb-2">
-                    Good
-                  </div>
+                  <div className="text-sm font-medium text-green-600 mb-2">Good</div>
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <Label>Full Name</Label>
@@ -168,13 +144,8 @@ export function CopywritingSection() {
               </div>
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
                 <div className="p-6 space-y-4 bg-card/30">
-                  <div className="text-sm font-medium text-destructive mb-2">
-                    Bad
-                  </div>
-                  <Alert
-                    variant="destructive"
-                    className="bg-destructive/10 border-destructive/20"
-                  >
+                  <div className="text-sm font-medium text-destructive mb-2">Bad</div>
+                  <Alert variant="destructive" className="bg-destructive/10 border-destructive/20">
                     <AlertCircle className="h-4 w-4" />
                     <AlertTitle>Error 404</AlertTitle>
                     <AlertDescription>
@@ -186,22 +157,15 @@ export function CopywritingSection() {
                   </p>
                 </div>
                 <div className="p-6 space-y-4 bg-card/30">
-                  <div className="text-sm font-medium text-green-600 mb-2">
-                    Good
-                  </div>
-                  <Alert
-                    variant="destructive"
-                    className="bg-destructive/10 border-destructive/20"
-                  >
+                  <div className="text-sm font-medium text-green-600 mb-2">Good</div>
+                  <Alert variant="destructive" className="bg-destructive/10 border-destructive/20">
                     <AlertCircle className="h-4 w-4" />
                     <AlertTitle>Listing not found</AlertTitle>
                     <AlertDescription>
                       This textbook listing may have been deleted or expired.
                     </AlertDescription>
                   </Alert>
-                  <p className="text-xs text-muted-foreground">
-                    Clear, specific, and non-blaming.
-                  </p>
+                  <p className="text-xs text-muted-foreground">Clear, specific, and non-blaming.</p>
                 </div>
               </div>
             </div>
@@ -217,9 +181,7 @@ export function CopywritingSection() {
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
                 <div className="p-6 space-y-4 bg-card/30 flex flex-col justify-between">
                   <div>
-                    <div className="text-sm font-medium text-destructive mb-2">
-                      Bad
-                    </div>
+                    <div className="text-sm font-medium text-destructive mb-2">Bad</div>
                     <div className="py-4">
                       <TooltipProvider>
                         <Tooltip>
@@ -239,9 +201,7 @@ export function CopywritingSection() {
                 </div>
                 <div className="p-6 space-y-4 bg-card/30 flex flex-col justify-between">
                   <div>
-                    <div className="text-sm font-medium text-green-600 mb-2">
-                      Good
-                    </div>
+                    <div className="text-sm font-medium text-green-600 mb-2">Good</div>
                     <div className="py-4">
                       <TooltipProvider>
                         <Tooltip>
@@ -250,9 +210,7 @@ export function CopywritingSection() {
                               Smart Search
                             </Button>
                           </TooltipTrigger>
-                          <TooltipContent>
-                            Search by ISBN, course code, or title
-                          </TooltipContent>
+                          <TooltipContent>Search by ISBN, course code, or title</TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
                     </div>
@@ -274,9 +232,7 @@ export function CopywritingSection() {
               </div>
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
                 <div className="p-6 space-y-4 bg-card/30">
-                  <div className="text-sm font-medium text-destructive mb-2">
-                    Bad
-                  </div>
+                  <div className="text-sm font-medium text-destructive mb-2">Bad</div>
                   <div className="border border-border rounded-lg p-4 bg-background">
                     <h6 className="font-semibold mb-2">Are you sure?</h6>
                     <p className="text-sm text-muted-foreground mb-4">
@@ -294,9 +250,7 @@ export function CopywritingSection() {
                   </p>
                 </div>
                 <div className="p-6 space-y-4 bg-card/30">
-                  <div className="text-sm font-medium text-green-600 mb-2">
-                    Good
-                  </div>
+                  <div className="text-sm font-medium text-green-600 mb-2">Good</div>
                   <div className="border border-border rounded-lg p-4 bg-background">
                     <h6 className="font-semibold mb-2">Delete this contact?</h6>
                     <p className="text-sm text-muted-foreground mb-4">
@@ -328,18 +282,14 @@ export function CopywritingSection() {
               </div>
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
                 <div className="p-6 space-y-4 bg-card/30">
-                  <div className="text-sm font-medium text-destructive mb-2">
-                    Bad
-                  </div>
+                  <div className="text-sm font-medium text-destructive mb-2">Bad</div>
                   <Button disabled>Loading...</Button>
                   <p className="text-xs text-muted-foreground">
                     Generic. Doesn&apos;t tell the user what is happening.
                   </p>
                 </div>
                 <div className="p-6 space-y-4 bg-card/30">
-                  <div className="text-sm font-medium text-green-600 mb-2">
-                    Good
-                  </div>
+                  <div className="text-sm font-medium text-green-600 mb-2">Good</div>
                   <Button disabled>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                     Processing Payment...
@@ -355,9 +305,7 @@ export function CopywritingSection() {
 
         {/* Section 3: Match button text (3-col table) */}
         <div className="space-y-4">
-          <h4 className="text-xl font-heading font-semibold">
-            Match button text to the action
-          </h4>
+          <h4 className="text-xl font-heading font-semibold">Match button text to the action</h4>
           <div className="rounded-xl border border-border overflow-hidden">
             <div className="grid grid-cols-12 bg-muted/50 border-b border-border">
               <div className="col-span-4 p-4 text-sm font-mono font-medium text-foreground">
@@ -373,9 +321,7 @@ export function CopywritingSection() {
             <div className="divide-y divide-border">
               {/* Row 1 */}
               <div className="grid grid-cols-12 bg-card/30 items-center">
-                <div className="col-span-4 p-4 text-sm text-muted-foreground">
-                  Primary action:
-                </div>
+                <div className="col-span-4 p-4 text-sm text-muted-foreground">Primary action:</div>
                 <div className="col-span-4 p-4 border-l border-border">
                   <div className="inline-flex items-center px-2.5 py-1 rounded bg-destructive/10 text-destructive text-xs font-medium">
                     &quot;Submit&quot;
@@ -428,34 +374,26 @@ export function CopywritingSection() {
           <h4 className="text-xl font-heading font-semibold">Be specific</h4>
           <div className="rounded-xl border border-border overflow-hidden">
             <div className="grid grid-cols-2 bg-muted/50 border-b border-border">
-              <div className="p-4 text-sm font-mono font-medium text-foreground">
-                Bad
-              </div>
+              <div className="p-4 text-sm font-mono font-medium text-foreground">Bad</div>
               <div className="p-4 text-sm font-mono font-medium text-foreground border-l border-border">
                 Good
               </div>
             </div>
             <div className="divide-y divide-border">
               <div className="grid grid-cols-2 bg-card/30">
-                <div className="p-4 text-sm text-destructive">
-                  &quot;Remove&quot;
-                </div>
+                <div className="p-4 text-sm text-destructive">&quot;Remove&quot;</div>
                 <div className="p-4 text-sm text-green-600 border-l border-border">
                   &quot;Delete listing&quot;
                 </div>
               </div>
               <div className="grid grid-cols-2 bg-card/30">
-                <div className="p-4 text-sm text-destructive">
-                  &quot;Change&quot;
-                </div>
+                <div className="p-4 text-sm text-destructive">&quot;Change&quot;</div>
                 <div className="p-4 text-sm text-green-600 border-l border-border">
                   &quot;Update price&quot;
                 </div>
               </div>
               <div className="grid grid-cols-2 bg-card/30">
-                <div className="p-4 text-sm text-destructive">
-                  &quot;Configure&quot;
-                </div>
+                <div className="p-4 text-sm text-destructive">&quot;Configure&quot;</div>
                 <div className="p-4 text-sm text-green-600 border-l border-border">
                   &quot;Edit profile preferences&quot;
                 </div>
@@ -484,9 +422,7 @@ export function CopywritingSection() {
                 className="flex items-center gap-3 p-3 rounded-xl bg-background/50 border border-border/30"
               >
                 <div className="size-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <span className="text-xs font-bold text-primary">
-                    {i + 1}
-                  </span>
+                  <span className="text-xs font-bold text-primary">{i + 1}</span>
                 </div>
                 <span className="text-sm font-medium">{item}</span>
               </div>
