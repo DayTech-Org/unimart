@@ -9,18 +9,19 @@
     "**/coverage/**",
     "**/supabase/migrations/**",
     "**/*.sql",
+    "packages/ui/src/styles/index.css"
   ],
 
   "tags": ["-lintignore"],
 
   "ignoreExportsUsedInFile": {
     "interface": true,
-    "type": true,
+    "type": true
   },
 
   "workspaces": {
     "apps/api": {
-      "entry": "src/**/*.{ts, js}",
+      "entry": "src/**/*.{ts, js}"
     },
     "apps/{web, design-system}": {
       "entry": [
@@ -29,19 +30,66 @@
         "middleware.{ts,tsx}",
         "next.config.{js,ts,mjs}",
         "tailwind.config.{js,ts}",
-        "postcss.config.{js,ts}",
+        "postcss.config.{js,ts}"
       ],
 
-      "project": ["**/*.{ts,tsx}", "**/*.js"],
+      "project": ["**/*.{ts,tsx}", "**/*.js"]
     },
     "packages/tsconfig": {
-      "entry": [],
+      "entry": []
     },
-    "packages/*": {
-      "entry": "{src/,}index.{ts,tsx}",
-      "project": "**/*.{ts,tsx}",
+    "packages/ui": {
+      "entry": "src/index.ts",
+      "project": ["src/**/*.{ts,tsx}"]
     },
+    "packages/ui-patterns": {
+      "entry": "src/index.ts",
+      "project": ["src/**/*.{ts,tsx}"]
+    },
+    "packages/{auth,common,db,types}": {
+      "entry": "src/index.ts",
+      "project": ["src/**/*.{ts,tsx}"]
+    }
   },
 
-  "ignoreDependencies": ["turbo", "tsdown"],
+  "ignoreDependencies": [
+    "turbo",
+    "tsdown",
+    "tailwindcss",
+    "@unimart/ui",
+    "class-variance-authority",
+    "clsx",
+    "lucide-react",
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "@hookform/resolvers",
+    "@radix-ui/react-accordion",
+    "@radix-ui/react-avatar",
+    "@radix-ui/react-checkbox",
+    "@radix-ui/react-dialog",
+    "@radix-ui/react-dropdown-menu",
+    "@radix-ui/react-label",
+    "@radix-ui/react-popover",
+    "@radix-ui/react-scroll-area",
+    "@radix-ui/react-select",
+    "@radix-ui/react-separator",
+    "@radix-ui/react-slot",
+    "@radix-ui/react-switch",
+    "@radix-ui/react-tabs",
+    "@radix-ui/react-toggle",
+    "@radix-ui/react-tooltip",
+    "cmdk",
+    "date-fns",
+    "embla-carousel-react",
+    "framer-motion",
+    "next-themes",
+    "radix-ui",
+    "react-day-picker",
+    "react-hook-form",
+    "react-textarea-autosize",
+    "sonner",
+    "vaul",
+    "zod"
+  ]
 }
