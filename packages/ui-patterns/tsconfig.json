@@ -3,7 +3,7 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     },
     "moduleResolution": "bundler"
   },
