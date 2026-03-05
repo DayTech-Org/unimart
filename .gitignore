@@ -22,3 +22,8 @@ storybook-static
 
 # notes
 /notes.md
+
+# generated files
+**/generated/**
+
+
