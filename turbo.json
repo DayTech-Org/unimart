@@ -1,20 +1,24 @@
 {
   "$schema": "./node_modules/turbo/schema.json",
   "globalDependencies": ["package.json", "tsconfig.json", "pnpm-lock.yaml", "pnpm-workspace.yaml"],
+  "globalEnv": ["DATABASE_URL"],
   "tasks": {
     "build": {
       "dependsOn": ["^build", "db:generate"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": ["dist/**", ".next/**"],
+      "env": ["DATABASE_URL"]
     },
     "db:generate": {
-      "outputs": ["src/generated/**"]
+      "outputs": ["src/generated/**"],
+      "env": ["DATABASE_URL"]
     },
     "dev": {
       "cache": false
     },
     "lint": {},
     "typecheck": {
-      "dependsOn": ["db:generate"]
+      "dependsOn": ["db:generate"],
+      "env": ["DATABASE_URL"]
     },
     "test": {
       "outputs": []

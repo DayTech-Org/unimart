@@ -10,6 +10,8 @@ jobs:
   build:
     name: Build, Lint, and Typecheck
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgresql://dummy:dummy@localhost:5432/dummy
     steps:
       - uses: actions/checkout@v4
         with:
