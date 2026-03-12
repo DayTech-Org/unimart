@@ -2,13 +2,12 @@
   "name": "@unimart/auth",
   "version": "0.0.0",
   "description": "Authentication package for the unimart project",
-  "main": "./src/index.ts",
+  "main": "./src/auth.ts",
   "license": "MIT",
   "exports": {
-    ".": {
-      "import": "./src/index.ts",
-      "require": "./src/index.ts"
-    }
+    ".": "./src/auth.ts",
+    "./actions": "./src/actions.ts",
+    "./config": "./src/auth.config.ts"
   },
   "scripts": {
     "lint": "biome check . --no-errors-on-unmatched",
@@ -29,6 +28,7 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "catalog:",
     "@unimart/tsconfig": "workspace:*",
-    "tsdown": "catalog:"
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
   }
 }

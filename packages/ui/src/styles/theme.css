@@ -45,7 +45,7 @@
 }
 
 [data-theme="mango"] {
-  --primary: oklch(0.7 0.2 38);
+  --primary: oklch(69.653% 0.19851 38.036);
   --primary-foreground: oklch(0.97 0.02 45);
   --primary-hover: oklch(0.65 0.22 38);
   --ring: var(--primary);
