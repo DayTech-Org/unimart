@@ -177,7 +177,7 @@ export default function ProductCatalogPage() {
         return (
           <Badge
             className={cn(
-              "uppercase text-[10px] font-black tracking-widest",
+              "uppercase text-xs",
               status === "active" && "bg-emerald-500/10 text-emerald-600 border-none",
               status === "low_stock" && "bg-amber-500/10 text-amber-600 border-none",
               status === "out_of_stock" && "bg-rose-500/10 text-rose-600 border-none"
@@ -268,7 +268,7 @@ export default function ProductCatalogPage() {
 
         {/* Dynamic Display */}
         {viewMode === "table" ? (
-          <div className="bg-surface/30 backdrop-blur-xl border border-border/10 rounded-3xl overflow-hidden">
+          <div>
             <DataTable
               columns={columns}
               data={PRODUCTS_DATA}
