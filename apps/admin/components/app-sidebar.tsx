@@ -1,3 +1,5 @@
+"use client";
+
 import {
   cn,
   Sidebar,
@@ -22,6 +24,8 @@ import {
   Store,
   Users,
 } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type * as React from "react";
 import { SidebarControl } from "./sidebar-control";
 
@@ -30,7 +34,6 @@ const navItems = [
     title: "Marketplace Hub",
     url: "/dashboard",
     icon: LayoutGrid,
-    isActive: true,
   },
   {
     title: "Product Catalog",
@@ -75,7 +78,8 @@ const navItems = [
 ];
 
 export function AppSidebar({ className, ...props }: React.ComponentProps<typeof Sidebar>) {
-  const { collapsible } = useSidebar();
+  const { collapsible, setOpenMobile } = useSidebar();
+  const pathname = usePathname();
 
   return (
     <Sidebar
@@ -87,37 +91,48 @@ export function AppSidebar({ className, ...props }: React.ComponentProps<typeof 
         <SidebarGroup className="p-0">
           <SidebarGroupContent>
             <SidebarMenu className="gap-1.5">
-              {navItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={item.isActive}
-                    tooltip={item.title}
-                    className={cn(
-                      "h-10 transition-all duration-200 group/btn",
-                      item.isActive
-                        ? "bg-primary/10 text-foreground font-semibold hover:bg-primary/10"
-                        : "text-muted-foreground hover:bg-primary/5 hover:text-foreground"
-                    )}
-                  >
-                    <a href={item.url} className="flex items-center gap-3 w-full">
-                      <item.icon
-                        className={cn(
-                          "size-4 shrink-0 opacity-70 group-hover/btn:opacity-100 transition-opacity",
-                          item.isActive && "text-primary opacity-100"
-                        )}
-                      />
-                      <span className="text-[13px] tracking-tight">{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {navItems.map((item) => {
+                const isActive =
+                  item.url === "/dashboard"
+                    ? pathname === "/dashboard"
+                    : item.url !== "#" && pathname.startsWith(item.url);
+
+                return (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={isActive}
+                      tooltip={item.title}
+                      className={cn(
+                        "h-10 transition-all duration-200 group/btn",
+                        isActive
+                          ? "bg-primary/10 text-foreground font-semibold hover:bg-primary/10"
+                          : "text-muted-foreground hover:bg-primary/5 hover:text-foreground"
+                      )}
+                    >
+                      <Link
+                        href={item.url}
+                        className="flex items-center gap-3 w-full"
+                        onClick={() => setOpenMobile(false)}
+                      >
+                        <item.icon
+                          className={cn(
+                            "size-4 shrink-0 opacity-70 group-hover/btn:opacity-100 transition-opacity",
+                            isActive && "text-primary opacity-100"
+                          )}
+                        />
+                        <span className="text-[13px] tracking-tight">{item.title}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-2 h-14 border-t border-border/50 bg-surface/10 flex items-center">
+      <SidebarFooter className="p-2 h-14 border-t border-border/50 bg-background flex items-center">
         <SidebarControl />
       </SidebarFooter>
       <SidebarRail />
